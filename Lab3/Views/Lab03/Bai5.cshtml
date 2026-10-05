@@ -1,0 +1,72 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Bài 5 - Progress</title>
+
+    <script language="JavaScript" src="~/Scripts/myJS/Bai5.js"></script>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .progress-container {
+            width: 500px;
+            height: 30px;
+            background-color: #ddd;
+            margin: auto;
+        }
+
+        #progress {
+            width: 0%;
+            height: 30px;
+            background-color: green;
+        }
+
+        #percent {
+            margin-top: 15px;
+            font-size: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>TIẾN TRÌNH ĐANG CHẠY</h1>
+
+    <div class="progress-container">
+
+        <div id="progress"></div>
+
+    </div>
+
+    <div id="percent">
+        0%
+    </div>
+
+    <br>
+
+    <button onclick="startProgress()">
+        Start
+    </button>
+
+    <button onclick="resetProgress()">
+        Reset
+    </button>
+
+</body>
+
+</html>

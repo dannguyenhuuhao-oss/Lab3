@@ -1,0 +1,60 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Bài 4 - To Do List</title>
+
+    <script language="JavaScript" src="~/Scripts/myJS/Bai4.js"></script>
+
+    <style>
+
+        body {
+            font-family: Arial;
+            width: 500px;
+            margin: 50px auto;
+        }
+
+        input {
+            padding: 10px;
+        }
+
+        button {
+            padding: 10px;
+        }
+
+        li {
+            margin: 10px 0;
+        }
+
+        .done {
+            text-decoration: line-through;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>TO-DO LIST</h1>
+
+    <input type="text"
+           id="task"
+           placeholder="Nhập công việc">
+
+    <button onclick="themCongViec()">
+        Thêm
+    </button>
+
+    <ul id="list"></ul>
+
+</body>
+
+</html>

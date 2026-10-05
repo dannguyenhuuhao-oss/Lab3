@@ -1,0 +1,247 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Phiếu tham gia CLB Tin học</title>
+
+    <script language="JavaScript" src="~/Scripts/myJS/Bai1.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h2 {
+            text-align: center;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+            h2 span {
+                color: #00aaff;
+            }
+
+        table {
+            width: 620px;
+            margin: auto;
+            border: 1px solid #777;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 7px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .cot1 {
+            width: 140px;
+        }
+
+        .cot2 {
+            width: 220px;
+        }
+
+        .loi {
+            color: red;
+            font-style: italic;
+        }
+
+        .thanhcong {
+            color: blue;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            width: 165px;
+            height: 20px;
+        }
+
+        select {
+            width: 110px;
+            height: 25px;
+        }
+
+        #sotruong {
+            border: none;
+            font-style: italic;
+            width: 200px;
+        }
+
+        .nut {
+            width: 70px;
+            height: 28px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>
+        PHIẾU THAM GIA CLB TIN HỌC
+        <span>LUBU</span>
+    </h2>
+
+    <form onsubmit="return dangKy();">
+
+        <table>
+
+            <!-- Mã sinh viên -->
+            <tr>
+                <td class="cot1">
+                    Mã sinh viên :
+                </td>
+
+                <td class="cot2">
+                    <input type="text"
+                           id="masv"
+                           placeholder="Nhập Mã SV">
+                </td>
+
+                <td>
+                    <span id="loi_masv" class="loi"></span>
+                </td>
+            </tr>
+
+
+            <!-- Họ và tên -->
+            <tr>
+                <td>
+                    Họ và tên :
+                </td>
+
+                <td>
+                    <input type="text"
+                           id="hoten"
+                           placeholder="Nhập Họ và tên">
+                </td>
+
+                <td>
+                    <span id="loi_hoten" class="loi"></span>
+                </td>
+            </tr>
+
+
+            <!-- Tuổi -->
+            <tr>
+                <td>
+                    Tuổi :
+                </td>
+
+                <td>
+                    <input type="text"
+                           id="tuoi"
+                           placeholder="Nhập tuổi > 18">
+                </td>
+
+                <td>
+                    <span id="loi_tuoi" class="loi"></span>
+                </td>
+            </tr>
+
+
+            <!-- Ngoại ngữ -->
+            <tr>
+                <td>
+                    Ngoại ngữ :
+                </td>
+
+                <td colspan="2">
+
+                    <input type="checkbox"
+                           name="ngoaingu"
+                           value="Anh"
+                           checked>
+                    Anh
+
+                    <input type="checkbox"
+                           name="ngoaingu"
+                           value="Pháp"
+                           checked>
+                    Pháp
+
+                    <input type="checkbox"
+                           name="ngoaingu"
+                           value="Nhật">
+                    Nhật
+
+                    <span id="loi_ngoaingu" class="loi"></span>
+
+                </td>
+            </tr>
+
+
+            <!-- Chuyên ngành -->
+            <tr>
+                <td>
+                    Chuyên ngành :
+                </td>
+
+                <td>
+                    <select id="chuyennganh"
+                            onchange="hienThiSoTruong()">
+
+                        <option value="hethong">
+                            Hệ thống
+                        </option>
+
+                        <option value="phanmem">
+                            Phần mềm
+                        </option>
+
+                        <option value="mang">
+                            Mạng máy tính
+                        </option>
+
+                    </select>
+                </td>
+
+                <td></td>
+            </tr>
+
+
+            <!-- Sở trường -->
+            <tr>
+                <td>
+                    Sở trường :
+                </td>
+
+                <td colspan="2">
+
+                    <input type="text"
+                           id="sotruong"
+                           value="Phân tích và thiết kế"
+                           readonly>
+
+                </td>
+            </tr>
+
+
+            <!-- Nút đăng ký -->
+            <tr>
+                <td></td>
+
+                <td>
+                    <input type="submit"
+                           value="Đăng ký"
+                           class="nut">
+                </td>
+
+                <td>
+                    <span id="ketqua"></span>
+                </td>
+            </tr>
+
+        </table>
+
+    </form>
+
+</body>
+
+</html>

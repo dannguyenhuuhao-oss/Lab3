@@ -1,0 +1,86 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2 - Giao hàng</title>
+
+    <script language="JavaScript" src="~/Scripts/myJS/Bai2.js"></script>
+
+    <style>
+        .error {
+            color: red;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>THÔNG TIN GIAO HÀNG</h2>
+
+    <form>
+
+        <p>
+            Tên:
+            <input type="text" id="ten">
+            <span id="ten_error" class="error"></span>
+        </p>
+
+        <p>
+            Địa chỉ:
+            <input type="text" id="diachi">
+            <span id="diachi_error" class="error"></span>
+        </p>
+
+        <p>
+            Tỉnh/Thành phố:
+            <input type="text" id="tinh">
+            <span id="tinh_error" class="error"></span>
+        </p>
+
+        <p>
+            Quận/Huyện:
+            <input type="text" id="quan">
+            <span id="quan_error" class="error"></span>
+        </p>
+
+        <p>
+            Phường/Xã:
+            <input type="text" id="phuong">
+            <span id="phuong_error" class="error"></span>
+        </p>
+
+        <p>
+            Số điện thoại:
+            <input type="text" id="sdt">
+            <span id="sdt_error" class="error"></span>
+        </p>
+
+        <p>
+            Hình thức giao hàng:
+        </p>
+
+        <input type="button"
+               value="Văn phòng"
+               onclick="chonGiaoHang('vanphong')">
+
+        <input type="button"
+               value="Nhà riêng"
+               onclick="chonGiaoHang('nharieng')">
+
+        <br><br>
+
+        <input type="button"
+               value="Lưu"
+               onclick="luuThongTin()">
+
+    </form>
+
+</body>
+</html>
